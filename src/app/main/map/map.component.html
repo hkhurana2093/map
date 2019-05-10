@@ -1,0 +1,11 @@
+<p>
+map works!
+</p>
+
+<agm-map [fitBounds]="true"  [zoom]="10" [latitude]="30.73331" [longitude]="76.779419" >
+  <ng-container *ngFor="let place of places">
+    <agm-marker [iconUrl]="icon"  (markerClick)="openModal(template)" [latitude]="place.latitude"  [longitude]="place.longitude" [label]="place.title" [agmFitBounds]="true" >
+      
+    </agm-marker>
+  </ng-container>
+</agm-map>
